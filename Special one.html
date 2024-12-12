@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal to Prestha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .message {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .proposal-message {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff6347;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .link {
+            margin: 10px;
+        }
+        .response-area {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="content">
+    <p class="message">Hi there...</p>
+    <p class="message">I have something important to say to you, Prestha...</p>
+<p class="proposal-message">Dear Prestha,<br>                        You are the most amazing person I've ever met.<br>
+        Your smile lights up my day, and your presence makes everything better.<br>
+        I want to spend every moment of my life cherishing you and making you happy.<br><br>
+        So, Prestha, will you be mine forever? 💖
+    </p>
+
+    <p class="message">Note: Your response will remain private. No one else will see it.</p>
+<p>type 'yes' or 'no' and if you want to talk regarding anything to me you can inform me with the time and place and I will be waiting for you at there</p>
+    <div class="response-area">
+        <input type="text" id="response" placeholder="Type 'Yes' if you feel the same" />
+        <button onclick="submitResponse()">Submit Response</button>
+    </div>
+
+    <p id="result" class="message"></p>
+    <p id="yourResponse" class="message"></p>
+    <p id="herResponse" class="message"></p> <!-- Where her response will be shown -->
+
+    <div class="links">
+        <p class="link"><a href="https://www.instagram.com/reel/C-R6c8exu0T/?igsh=aHFzcm1uenA4aTdj" target="_blank">Watch this Instagram Reel 1</a></p>
+        <p class="link"><a href="https://www.instagram.com/reel/DDYlsxGSSwu/?igsh=MXB0N252MWtvaXhpYw==" target="_blank">Watch this Instagram Reel 2</a></p>
+    </div>
+</div>
+
+<script>
+    function submitResponse() {
+        var response = document.getElementById("response").value.trim().toLowerCase();
+        var result = document.getElementById("result");
+        var yourResponse = document.getElementById("yourResponse");
+        var herResponse = document.getElementById("herResponse");
+
+        // Display the response from Pretha (simulating her typing the response)
+        yourResponse.innerHTML = `<strong>Your Response:</strong> "${response}"`; // Display your input
+        
+        // Display the proposal outcome based on her response
+        if (response === "yes") {
+            result.innerHTML = "You just made me the happiest person in the world! 🥰";
+        } else if (response === "no") {
+            result.innerHTML = "That's okay! I still think you're amazing. 😊";
+        } else {
+            result.innerHTML = "I appreciate your response. 💖";
+        }
+
+        // Show the "her" response section as if it's being captured after submission
+        herResponse.innerHTML = `<strong>Pretha's Response:</strong> "${response}"`; // This simulates you watching her response
+    }
+</script>
+
+</body>
+</html>
